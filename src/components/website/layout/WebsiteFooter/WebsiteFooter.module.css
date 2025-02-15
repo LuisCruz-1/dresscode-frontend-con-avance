@@ -1,0 +1,43 @@
+.footer {
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Bloque izquierdo: Logo y Copyright */
+.leftBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.copy {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leftBlock {
+    align-items: center;
+  }
+}
