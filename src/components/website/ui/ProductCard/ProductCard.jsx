@@ -14,12 +14,13 @@ const ProductCard = ({ product, onClick }) => {
   };
 
   // Suponiendo que el objeto product tiene una propiedad 'color' para el ejemplo
-  const productColor = product.color || 'transparent'; // Color por defecto si no hay color definido
+  const productColor = product.color || 'black'; // Color por defecto si no hay color definido
+  const productImage = product.images?.[0] || 'https://via.placeholder.com/200';
 
   return (
     <div className={styles.productCard} onClick={handleClick}>
       <div className={styles.imageContainer}>
-        <img src={product.image} alt={product.name} className={styles.image} />
+        <img src={productImage} alt={product.name} className={styles.image} />
       </div>
       <div className={styles.details}>
       <div className={styles.colorBox} style={{ backgroundColor: productColor }}></div>
